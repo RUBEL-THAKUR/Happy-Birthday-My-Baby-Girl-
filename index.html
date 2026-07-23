@@ -723,5 +723,24 @@ function initFinal(){
   ['f1','f2','f3'].forEach((id,i)=>setTimeout(()=>document.getElementById(id).classList.add('lit'),1500+i*2000));
 }
 </script>
+
+<!-- ================================================
+     BACKGROUND MUSIC — pehle click pe bajega
+     Apni song file ka naam neeche dalo
+================================================ -->
+<audio id="bgMusic" loop>
+  <source src="Edd_Sheeran_-_Perfect_(mp3.pm).mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  document.addEventListener('click', function () {
+    var music = document.getElementById('bgMusic');
+    if (music.paused) {
+      music.volume = 0.4;
+      music.play();
+    }
+  }, { once: true });
+</script>
+
 </body>
 </html>
